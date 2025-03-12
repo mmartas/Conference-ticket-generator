@@ -1,12 +1,14 @@
 :root {
     --Neutral-0: hsl(0, 0%, 100%);
+    --white-opacity: rgba(255, 255, 255, 0.1);
     --Neutral-300: hsl(252, 6%, 83%);
     --Neutral-500: hsl(245, 15%, 58%);
     --Neutral-700: hsl(245, 19%, 35%);
     --Neutral-900: hsl(248, 70%, 10%);
     --Orange-500: hsl(7, 88%, 67%);
     --Orange-700: hsl(7, 71%, 60%);
-    --Gradient: hsl(7, 86%, 67%) to hsl(0, 0%, 100%)
+    --Gradient1: hsl(7, 86%, 67%);
+    --Gradient2: hsl(0, 0%, 100%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
@@ -29,6 +31,13 @@ html {
     width: 50%;
     margin: 0 auto;
 }
+
+.full-first-page {
+    display: none;
+}
+
+
+
 
 .headign-part1-page1 {
     text-align: center;
@@ -71,24 +80,11 @@ html {
     color: var(--Neutral-0);
 }
 
-.labels {
-    display: block;
-    /*margin-bottom: 10px;*/
-}
-
-
-
-
 #fullForm {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
-/* .inputFullName {
-    display: flex;
-    flex-direction: column;
-} */
 
 .fullInputs {
     display: flex;
@@ -96,15 +92,14 @@ html {
     gap: 10px;
 }
 
-
 .textInput {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
     outline: none;
     border: 1px solid var(--Neutral-500);
-    background: transparent;
-    color: var(--Neutral-500);
+    background: var(--white-opacity);
+    color: var(--Neutral-0);
     box-sizing: border-box;
 }
 
@@ -131,19 +126,78 @@ html {
     height: 100px;
     text-align: center;
     color: var(--Neutral-300);
+    background: var(--white-opacity);
+}
+
+.file-upload:hover {
+    cursor: pointer;
 }
 
 .file-upload p {
     margin: 0;
+    font-size: 14px;
 }
 
 .file-upload img {
     margin: 13px 0;
-    border: 1px solid var(--Neutral-0);
+    border: 1px solid var(--Neutral-500);
     border-radius: 10px;
     padding: 5px;
+    background: var(--Neutral-700);
 }
 
 #photo {
     display: none !important;
+}
+
+
+
+/* NEXT PAGE */
+.congrats-page-name {
+    background: linear-gradient(to right, var(--Gradient1), var(--Gradient2));
+    color: transparent;
+    background-clip: text;
+}
+
+.ticket {
+    position: relative;
+}
+
+#pattern {
+    display: block;
+    margin: 0 auto;
+}
+
+.ticket .logo-name {
+    width: 300px;
+    display: flex;
+    justify-content: left;
+    position: absolute;
+    top: 30px;
+    left: 90px;
+    gap: 20px;
+    align-items: center;
+}
+
+.ticket .logo-name h2 {
+    margin: 0;
+    font-size: 32px;
+    color: var(--Neutral-0);
+}
+
+.ticket .logo-name img {
+    width: 30px;
+}
+
+
+
+.ticket .time-place {
+    position: absolute;
+    top: 80px;
+    left: 140px;
+}
+
+.ticket .time-place p {
+    margin: 0;
+    color: var(--Neutral-500);
 }
